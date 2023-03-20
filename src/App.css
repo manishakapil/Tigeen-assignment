@@ -1,0 +1,113 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: WHITE !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
+  color: WHITE !important;
+}
+
+.choose-style{
+   font-size: 18px;
+   font-weight: 300;
+   
+}
+.footer{
+  margin-top: 1rem;
+  background-color: grey!important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-style{
+  width: 100% !important;
+}
+.css-h0q0iv-MuiButtonBase-root-MuiTab-root{
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.header-logo{
+  width: auto !important;
+  height: auto;
+}
+
+.header-logo-left{
+  text-align: left;
+}
+
+.header-logo-right{
+  text-align: right;
+}
+
+.header-logo-center{
+  text-align: center !important;
+}
+
+.header-logo-disable{
+  text-align: left;
+}
+
+.css-hip9hq-MuiPaper-root-MuiAppBar{
+  background-color: grey !important;
+  
+}
+
+.bg-grey{
+  background-color: grey !important;
+}
+
+.profile-hidden {
+  display: none;
+}
+
+.profile-displayed {
+  display: block;
+}
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+  box-shadow: none !important ;
+}
+
+
+

@@ -25,7 +25,7 @@ export default function Box1() {
                     <div>
                     <Stepper1 />
                         <div style={{paddingLeft:"40px"}}>
-                            <Check1 />
+                            <Check1/>
                             <Check2 />
                             <SwitchLabels />
                         </div>

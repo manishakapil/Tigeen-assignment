@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext,} from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -7,26 +7,29 @@ import { Row } from 'react-bootstrap';
 import './App.css';
 import DrawerHeader from './DrawerHeader';
 import DrawerHeaderRight from './DrawerHeaderRight';
+import CSS from './Context';
 
 const Header = () => {
+    const [css, setCss] = useContext(CSS);
+    const [cssColor, setCssColor] = useContext(CSS);
     return (
         <>
             <Box>
-                <AppBar position='static'>
-                        <Row>
-                            <Col style={{ margin: "auto", textAlign: "center"}}>
-                            <DrawerHeader/>
-                            </Col>
-                            <Col xs={10} md={10}>
-                                <Typography component="div" className='header-logo' sx={{ flexGrow: 0 }} >
-                                    <img src="../images/logo.png" alt="logo" />
-                                </Typography>
-                            </Col>
-                            <Col style={{ margin: "auto", textAlign: "center" }}>
-                              <DrawerHeaderRight/>
-                            </Col>
-                        </Row>
-                   
+                <AppBar style={{ backgroundColor: cssColor}} position='static'>
+                    <Row>
+                        <Col style={{ margin: "auto", textAlign: "center" }}>
+                            <DrawerHeader />
+                        </Col>
+                        <Col style={{ textAlign: css }} xs={10} md={10}>
+                            <Typography component="div" className='header-logo' sx={{ flexGrow: 0 }} >
+                                <img src="../images/logo.png" alt="logo" />
+                            </Typography>
+                        </Col>
+                        <Col style={{ margin: "auto", textAlign: "center" }}>
+                            <DrawerHeaderRight />
+                        </Col>
+                    </Row>
+
                 </AppBar>
             </Box>
         </>

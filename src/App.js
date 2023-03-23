@@ -1,4 +1,4 @@
-import React, { useState}  from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './Header';
 import LabTabs from './LabTabs';
@@ -9,15 +9,14 @@ function App() {
   const state = useState();
   return (
     <>
-
-<CSS.Provider value={state}>
-      <Header/> 
-      <LabTabs/>
-      <Footer/>
-  </CSS.Provider>
+      <CSS.Provider value={state}>
+        <Header />
+        <LabTabs />
+        <Footer />
+      </CSS.Provider>
     </>
   );
 }
 
 export default App;
-export {CSS}
+export { CSS }

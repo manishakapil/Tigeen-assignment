@@ -1,12 +1,15 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-
-export default function SwitchLabels() {
+import CSS from './Context';
+ 
+const SwitchLabels = () => {
+  const [cssHeader, setCssHeader] = useContext(CSS);
+  const [cssFooter, setCssFooter] = useContext(CSS);
   return (
     <FormGroup style={{paddingTop:"15px",paddingBottom:"20px"}}>
-      <FormControlLabel control={<Switch defaultChecked />} label="I want a Header" />
+      <FormControlLabel onClick={() => setCssHeader((cssHeader === "") ? "hidden" : "")} control={<Switch defaultChecked />} label="I want a Header" />
       <FormControlLabel control={<Switch defaultChecked />} label="I want a Footer" />
       <FormControlLabel control={<Switch defaultChecked />} label="I want a Drawer Overlay Mode(requires Header or Footer)" />
       <FormControlLabel control={<Switch defaultChecked />} label="I want a Left-side Drawer" />
@@ -16,3 +19,5 @@ export default function SwitchLabels() {
     </FormGroup>
   );
 }
+
+export default SwitchLabels

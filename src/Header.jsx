@@ -12,9 +12,16 @@ import CSS from './Context';
 const Header = () => {
     const [css, setCss] = useContext(CSS);
     const [cssColor, setCssColor] = useContext(CSS);
+    const [cssHeader, setCssHeader] = useContext(CSS);
+    var condition = cssHeader;
+    if(condition === "hidden"){
+        condition = ""
+    } else if(condition === ""){
+        condition = "hidden"
+    }
     return (
         <>
-            <Box>
+            <Box style={{ backgroundColor: cssColor, visibility: condition}}>
                 <AppBar style={{ backgroundColor: cssColor}} position='static'>
                     <Row>
                         <Col style={{ margin: "auto", textAlign: "center" }}>

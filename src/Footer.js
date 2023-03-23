@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext,} from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,9 +8,18 @@ import IconTab from "./IconTab";
 import "./App.css"
 import DrawerHeaderTop from "./DrawerHeaderTop";
 import DrawerHeaderBottom from "./DrawerHeaderBottom";
+import CSS from './Context';
 
 
-const Footer = () => (
+const Footer = () => {
+    const [cssFooter, setCssFooter] = useContext(CSS);
+    var condition1 = cssFooter;
+    if(condition1 == "hidden"){
+        condition1 = ""
+    } else if(condition1 == ""){
+        condition1 = "hidden"
+    }
+    return (
     <div className="footer">
         <Box>
             <AppBar className="bg-grey"  position="static">
@@ -41,6 +50,7 @@ const Footer = () => (
             </AppBar>
         </Box>
     </div>
-);
+    )
+};
 
 export default Footer;
